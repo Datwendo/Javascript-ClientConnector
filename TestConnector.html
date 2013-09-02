@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Datwendo: Call Connector from js</title>
+		<meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="css/site.css" />
+        <script src="js/modernizr-2.6.2.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><a href="/">Datwendo</a></p>
+                </div>
+                <div class="float-right">
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="TestIntString.html">Call Connector Data Storage</a></li>
+                            <li><a href="TestIntBlob.html">Call Connector Blob Storage</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <div id="body">
+            <section class="featured">
+                <div class="content-wrapper">
+                    <hgroup class="title">
+                        <h1>Client Cloud Connector call using Javascript</h1>
+                    </hgroup>
+                </div>
+            </section>
+            <section class="content-wrapper main-content clear-fix">
+                <div style="float:left; width: 50%;">
+                    <label for="Id">Datwendo Service Url</label>
+                    <input type="text" id="ServiceUrl" name="ServiceUrl" value="http://datwendosvc.cloudapp.net/"/>  
+                    <label for="Id">Connector Id</label>
+                    <input type="text" id="Id" name="Id"/>
+                    <label for="Ky">Secret Key</label>
+                    <input type="text" id="Ky" name="Ky" />
+                    <label for="Dl">Key Delay</label>
+                    <input type="text" id="Dl" name="Dl"  value="20"/>            
+            
+                    <label for="Pb">Publisher</label>
+                    <input id="Pb" name="Pb" type="text" value="0"/>
+
+                    <label for="nwval">New Secret</label>
+                    <input id="nwsecret" type="text" disabled class="newSecret" />                
+                
+                    <label for="nwval">Result</label>
+                    <input id="nwval" type="text" disabled class="newValue" />
+                
+                    <label for="Error1">Error Code</label>
+                    <input id="Error1" type="text" disabled class="Error1" /><br />
+                    <button id="btnStart" class="btnStart" >Start</button><button id="btnNext" class="btnNext">Next</button>
+                    <button id="btnRead" class="btnRead" >Read</button><button id="btnStop" class="btnStop" >Stop</button>
+
+                </div>
+                <div style="float:left; width: 50%;">
+                    <label for="lp">Number Loops</label>
+                    <input id="lp" type="text" value="100"/>
+                    <label for="nwval2">Result Loop</label>
+                    <textarea id="nwval2"  class="newValue2"  rows="10"></textarea>
+                    <label for="delay">Delay</label>
+                    <input id="delay" type="text" disabled class="delay"/>
+                    <label for="Error2">Error Code</label>
+                    <input id="Error2" type="text" disabled class="Error2" />
+                    <img id="loader" src="~/Content/ajax-loader.gif"  /><br />
+                    <button id="btnNextLoop" class="btnNextLoop" >Start Next Loops</button>
+                    <button id="btnReadLoop" class="btnReadLoop" >Start Read Loops</button>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; 2013 - My Datwendo HTML 5 / Javascript</p>
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery-1.8.2.js"></script>
+        <script src="js/CallConnector.js"></script>
+	</body>
+</html>
